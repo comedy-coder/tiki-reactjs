@@ -2,6 +2,7 @@ import React from 'react'
 import "./header.scss"
 import logo from "../../assets/header/logo1.png"
 import logo2 from "../../assets/header/logo-2.png"
+import Button from '../Button/Button'
 
 const Header = () => {
   const navBar = 
@@ -42,7 +43,8 @@ const Header = () => {
           <div className="header__navbar__search">
               <div className="header__navbar__search__input">
                 <input type="text" placeholder='Tìm danh mục sản phâm' className="header__navbar__input-text" />
-      
+          <Button backgroundColor="black"
+            >Tìm kiếm</Button>
                 </div>
             </div>
           </div>

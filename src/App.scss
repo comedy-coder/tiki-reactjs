@@ -57,3 +57,12 @@ iframe {
 .section__header {
     @include flex(center, space-between);
 }
+@each $color, $val in $colors {
+    .color-#{$color} {
+        color: $val;
+    }
+
+    .bg-#{$color} {
+        background-color: $val;
+    }
+}
