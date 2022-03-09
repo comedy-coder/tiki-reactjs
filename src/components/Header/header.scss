@@ -1,0 +1,31 @@
+@use "../../scss/variable" as *;
+@use "../../scss/mixin" as *;
+
+.header{
+  
+    height:$header-height ;
+    background-color: $headr-bg ;
+    .container{
+        @include flex(center,space-between);
+        height: 100%;
+    }
+    &__logo{
+        img {
+            display: block;
+        }
+        &__tiki{
+            width: 60px;
+            height: 40px;
+            margin-bottom: 10px;
+        }
+        &__freeship
+        {
+            width: 83px;
+            height: 12px;
+        }
+        
+           
+
+        
+    }
+}
