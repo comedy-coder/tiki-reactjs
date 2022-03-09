@@ -1,0 +1,13 @@
+@use "../scss/variable" as *;
+
+.header{
+    background-color: $headr-bg ;
+    &__logo{
+        width: 85px;
+            img{
+                width: 85px;
+            }
+
+        
+    }
+}
