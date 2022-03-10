@@ -1,12 +1,14 @@
 @use '../../scss/variable' as *;
 @use '../../scss/breakpoint' as *;
+@use '../../scss/mixin' as *;
 .btn {
+    border-radius: 3px;
     outline: 0;
     border: 0;
     font-weight: 600;
-    font-size:  1.5rem;
+    font-size:  1.2rem;
     overflow: hidden;
-    color: $main-btn-color;
+    color: white;
     cursor: pointer;
     position: relative;
     text-transform: uppercase;
@@ -17,7 +19,7 @@
     &__icon 
     {
         display: block;
-        transition: transform 0.5 ease;
+        transition: transform 0.5s ease;
     }
     &__txt
     {
@@ -25,19 +27,29 @@
     }
 
     &__icon{
-        font-size: 2rem;
+        font-size: 1.5rem;
         position: absolute;
         top:0;
         left: 0;
         transform: translateX(-100%);
         width: 100%;
         height: 100%;
+        @include flex (center,center)
     }
     &-animate:hover &__txt  {
         transform: translateX(100%);
     }      
     &-animate:hover &__icon  {
         transform: translateX(0);
-    }      
+    }   
+    
+    &-sm {
+        font-size: 1rem;
+    }
+
+    &-sm &__txt {
+        padding: 0.7rem 1.5rem;
+    }
+
 
 }

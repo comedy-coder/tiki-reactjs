@@ -3,7 +3,7 @@ import "./header.scss"
 import logo from "../../assets/header/logo1.png"
 import logo2 from "../../assets/header/logo-2.png"
 import Button from '../Button/Button'
-
+import { Link } from 'react-router-dom'
 const Header = () => {
   const navBar = 
   [
@@ -42,12 +42,50 @@ const Header = () => {
         <div className="header__navbar">
           <div className="header__navbar__search">
               <div className="header__navbar__search__input">
-                <input type="text" placeholder='Tìm danh mục sản phâm' className="header__navbar__input-text" />
-          <Button backgroundColor="black"
-            >Tìm kiếm</Button>
+                <input type="text" placeholder='Tìm danh mục sản phâm' className="header__navbar__search__input-text" />
+                <Button backgroundColor="blue" icon={`bx bx-search-alt`} animate={true} size="sm"
+                >Tìm kiếm</Button>
                 </div>
+                <div className="header__navbar__category">
+                  {navBar.map((item,index) => (
+                    <Link to = {item.path} key={index} >
+                      <div className="header__navbar__category__list" key={index}> 
+                      {item.display}</div>
+                      </Link>
+                      
+                     ))}
+                  </div>
+              
             </div>
-          </div>
+            </div>
+            <div className="header__user">
+                    <div className="header__user__icon">
+                    <i className='bx bx-user' ></i>
+                     </div>
+                     <div className="div">
+                    <div className="header__user__profile">
+                      <span>Đăng nhập/</span>
+                      <span>Đăng ký</span>
+                    </div>
+                    <div className="header__user__account">
+                      <span>Tài khoản</span> 
+                      <i className='bx bxs-down-arrow' ></i>
+                      </div>
+                      </div>
+               </div>
+               <div className="header__cart">
+                 <div className="header__cart__item">
+                 <i class='bx bx-cart' ></i>
+                 <span>Giỏ Hàng</span>
+                  </div>
+                  <div className="header__cart__store">
+                  <i class='bx bx-store' ></i>
+                  <span>Bán hàng cùng tiki</span>
+                    </div>
+
+                 </div>
+            
+          
     </div>
     </div>
   )

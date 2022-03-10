@@ -24,8 +24,67 @@
             height: 12px;
         }
         
-           
-
-        
     }
+     &__navbar{
+         &__search
+         {
+             &__input-text{
+                 width: 620px;
+                 height: 40px;
+                
+                 outline: none;
+                 border: 0;
+                 padding: 0 0.5rem;
+
+             }
+         }
+         &__category{
+             @include flex (center,unset);
+             &__list{
+                 font-size: 0.7rem;
+                 color: white;
+                 margin-right: 1rem;
+                 margin-top:5px;
+             }
+             
+         }
+     }      
+        &__user{
+            height: 4rem;
+            @include flex (unset,flex-start);
+            &__icon
+            {
+                font-size: 2.4rem;
+                color: white;
+            }
+            &__profile,
+            &__account
+            {
+                font-size: 0.7rem;
+                color: white;
+                margin-left: 5px;
+                cursor: pointer;
+                i{
+                    font-size: 0.5rem;
+                    margin-left: 3px;
+                }
+            }
+        }
+        &__cart
+        {
+            &__item,
+            &__store
+            {
+                font-size: 0.8rem;
+                color: white;
+            }
+            &__item{
+                text-align: center;
+                i{
+                    font-size: 2.2rem;
+                    font-weight: 400;
+                }
+            }
+        }
+        
 }
