@@ -62,7 +62,7 @@ const Header = () => {
                     <div className="header__user__icon">
                     <i className='bx bx-user' ></i>
                      </div>
-                     <div className="div">
+                     <div className="header__user__front">
                     <div className="header__user__profile">
                       <span>Đăng nhập/</span>
                       <span>Đăng ký</span>

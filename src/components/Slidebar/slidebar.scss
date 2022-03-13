@@ -1,0 +1,42 @@
+@use "../../scss/variable" as *;
+@use "../../scss/mixin" as *;
+.slidebar {
+    padding: 15px;
+    font-size: 1rem;
+    font-weight: 400;
+    background-color: white;
+    position: relative;
+    .container
+    {
+        position: relative;
+        .sliderbar__arrow
+        {
+        position: absolute;
+        top : -10%;
+        right: 0;
+        font-size: 1.6rem;
+        i{
+            font-weight: 600;
+        }
+        
+        }
+    }
+    
+    &__list{
+        @include flex(center, unset);
+                    overflow:auto;
+                    text-align: center;
+                    max-width: 100%;
+                    
+                    &__item{
+            font-weight: 300;
+            flex-shrink: 0;
+            margin-left: 1.65rem;
+            -webkit-scrollbar : none;
+            overflow: hidden;
+            &.active{
+                transform: translateX(100%);
+            }
+            
+        }
+    }}

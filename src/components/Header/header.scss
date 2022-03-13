@@ -10,6 +10,7 @@
         height: 100%;
     }
     &__logo{
+        
         img {
             display: block;
         }
@@ -25,7 +26,7 @@
         }
         
     }
-     &__navbar{
+     &__navbar{     margin-left: 7rem;
          &__search
          {
              &__input-text{
@@ -50,12 +51,17 @@
          }
      }      
         &__user{
-            height: 4rem;
+            height: 3.6rem;
             @include flex (unset,flex-start);
             &__icon
             {
                 font-size: 2.4rem;
                 color: white;
+                line-height: 1.4rem;
+            }
+            &__front 
+            {
+                line-height: 1.2rem;
             }
             &__profile,
             &__account
@@ -71,19 +77,43 @@
             }
         }
         &__cart
-        {
+        {  
+            
             &__item,
             &__store
-            {
+            {   
                 font-size: 0.8rem;
                 color: white;
+                
             }
             &__item{
                 text-align: center;
                 i{
                     font-size: 2.2rem;
                     font-weight: 400;
+                    margin-top: 4px;
+                    margin-bottom: 0.7rem;
+                    
                 }
+            }
+            &__store{   
+                span{
+                    margin-left: 2px;
+                }
+                i 
+                {  
+                    @include flex(center,center);
+                    font-size: 1.2rem;
+                }
+
+
+
+                line-height: 1rem;
+                background-color: #53AFFF;
+                @include flex(center,center);
+                padding : 3px 10px;
+                border-radius: 40px;
+
             }
         }
         
