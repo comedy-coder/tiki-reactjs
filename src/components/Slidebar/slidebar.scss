@@ -6,37 +6,63 @@
     font-weight: 400;
     background-color: white;
     position: relative;
-    .container
-    {
-        position: relative;
-        .sliderbar__arrow
-        {
-        position: absolute;
-        top : -10%;
-        right: 0;
-        font-size: 1.6rem;
-        i{
-            font-weight: 600;
+    overflow: hidden;
+    
+   
+    &__arrow
+    {   
+        &__right{
+            position: absolute;
+            top : 25%;
+            right: 0;
+            z-index: 100;
+            font-size: 1.6rem;
+            cursor: pointer;
+            &.disable
+            {
+                display: none;
+            }
         }
+        &__left{
+            top: 25%;
+            left: 0;
+            z-index: 100;
+            font-size: 1.6rem;
+            cursor: pointer;
+            position: absolute;
+            display: none;
+            &.disable
+            {
+                display: block;
+            }
+        }   
+             
         
+        i{
+            font-weight: 500;
         }
     }
     
     &__list{
         @include flex(center, unset);
-                    overflow:auto;
+                   
                     text-align: center;
                     max-width: 100%;
                     
-                    &__item{
+                    transform: translateX(0);
+                    transition: transform ease 0.5s;
+                    &.active{
+                        transform: translateX(-100%);
+                        transition: transform ease 0.5s;
+                    }
+                      
+
+            &__item{
             font-weight: 300;
             flex-shrink: 0;
-            margin-left: 1.65rem;
+            margin-right: 1.68rem;
             -webkit-scrollbar : none;
-            overflow: hidden;
-            &.active{
-                transform: translateX(100%);
-            }
-            
         }
+            
+            
     }}

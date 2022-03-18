@@ -33,8 +33,8 @@ const Header = () => {
   },
 ]
   return (
-  <div className="header">
-      <div className="container">
+        <div className="header">
+    <div className="container">
         <div className="header__logo">
             <img src={logo} alt = "" className="header__logo__tiki" />
             <img src={logo2} alt = "" className="header__logo__freeship" />

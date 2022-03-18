@@ -102,24 +102,36 @@ const Slidebar = () =>
    }
 ]
     const menuLeft = useRef(null)
-    const menuToogle = () => menuLeft.current.classList.toggle('active')
-        
-  return (
-    <div className = "slidebar "> 
+    const arrowLeft = useRef(null)
+    const arrowRight = useRef(null)
+    const menuToogle = () =>{ menuLeft.current.classList.toggle('active')
+                                arrowLeft.current.classList.toggle('disable')
+                                arrowRight.current.classList.toggle('disable')
+                            
+                            }
+                            
+    
+  
+    return (
     <div className="container">
-            <div className="slidebar__list" >
+    <div className = "slidebar"> 
+             <div className="slidebar__arrow__right" onClick={menuToogle} ref={arrowLeft}  >
+             <i className='bx bx-chevron-right' ></i>
+            </div>
+            <div className="slidebar__arrow__left" onClick={menuToogle} ref={arrowRight}>
+             <i className='bx bx-chevron-left' ></i>
+            </div>
+            
+            <div className="slidebar__list" ref ={menuLeft} >
                 {slidebarItem.map((item,index)=>
                 (
-                    <div className="slidebar__list__item" ref= {menuLeft} key={index}>
+                    <div className="slidebar__list__item" key={index}>
                          {item.display}</div>
                 )
                 )}
             </div>
-            <div className="sliderbar__arrow" onClick={menuToogle}>
-            <i className='bx bx-chevron-right' >
-            </i>
+          
                 
-            </div>
     </div>
     </div> 
 
